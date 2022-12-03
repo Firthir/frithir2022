@@ -2,7 +2,7 @@
 
 Using animate.css and GASP to create a interactive and engaging site.  
 Features:  
- - Maps https://react-leaflet.js.org/
- - EmailJS library: https://www.emailjs.com/
+ - JS Maps https://react-leaflet.js.org/
+ - JS Contact from: https://www.emailjs.com/
 
  
