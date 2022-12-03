@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import AnimatedLetters from '../AnimatedLetters';
 import HomeLogo from './Logo';
+import CanvasLogo from './CanvasLogo';
 
 const Home = () => {
     const [letterClass, setLetterClass] =  useState('text-animate') 

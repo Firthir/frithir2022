@@ -1,14 +1,12 @@
 import './index.scss'
 import { useEffect, useRef } from 'react';
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
-import gsap from 'gsap-trial';
+import gsap from 'gsap';
 
 const HomeLogo = () => {
     const bgRef = useRef()
     const outlineLogoRef = useRef()
 
     useEffect(() => {
-        gsap.registerPlugin(DrawSVGPlugin)
         gsap.timeline()
         .to(bgRef.current, {
             duration: 1,
