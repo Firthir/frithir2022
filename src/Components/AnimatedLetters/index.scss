@@ -1,0 +1,26 @@
+.text-animate {
+    display: inline-block;
+    opacity: 0;
+    animation: bounceIn 1s 2s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+.text-animate-hover {
+    transition: all 0.3s ease-out;
+    &:hover {
+        color: #da1710;
+    }
+}
+
+.completeAnimation {
+    display: inline-block;
+    animation-fill-mode: both;
+    cursor: default;
+    animation: rubberBand 1s;
+}
+
+@for $i from 1 through 40 {
+    .text-animate._#{$i} {
+        animation-delay: #{$i / 10}s;
+    }
+}

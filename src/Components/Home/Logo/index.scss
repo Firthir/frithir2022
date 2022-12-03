@@ -1,0 +1,39 @@
+ .home-logo {
+    z-index: 0;
+    width: 60%;
+    height: 100%;
+    position:absolute;
+    top:20%;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    svg {
+        width: 100%;
+        height: auto;
+        bottom: 0;
+        transform: rotateZ(55deg) !important;
+    }
+    .solid-logo {
+        position:absolute;
+        top:auto;
+        right: auto;
+        bottom: auto;
+        left: 0; 
+        margin: auto;
+        width: 100%;
+        transform: rotateZ(55deg);
+        opacity: 0;
+        z-index: 1;
+    }
+    .svg-container {
+        stroke: #da1710;
+        stroke-width: 1px;
+    }
+    .in-and-out  {
+        animation-fill-mode: both;
+        cursor: default;
+        animation: jello 2s ease-in-out !important;
+    }
+ }
+
+ 

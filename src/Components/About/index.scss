@@ -1,0 +1,77 @@
+.cube-container {
+    width: 50%;
+    height: 80%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 0;
+    margin-left: 0;
+    overflow: hidden;
+}
+.cube-spinner {
+    animation-name: spincbue;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transform-style: preserve-3d;
+    transform-origin: 300px 300px 0;
+    margin-left: calc(50% - 300px);
+    &:hover {
+        animation-play-state: paused;
+        cursor: progress;
+    }
+    div {
+        position: absolute;
+        width: 600px;
+        background: rgba(42,46,66, 1);
+        height: 600px;
+        color: #FEDAF8;
+        font-size: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 40px;
+        font-family: 'Coolvetica', sans-serif;
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
+    .cube-face-1 {
+        transform: translateZ(300px); 
+    }
+    .cube-face-2 {
+        transform: rotateY(90deg) translateZ(300px); 
+    }
+    .cube-face-3 {
+        transform: rotateY(90deg) rotateX(90deg) translateZ(300px);
+    }
+    .cube-face-4 { 
+        transform:  rotateY(180deg) rotateZ(90deg) translateZ(300px);
+    }
+    .cube-face-5 {
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(300px);
+    }
+    .cube-face-6 {
+        transform: rotateX(-90deg) translateZ(300px);
+    }
+}
+@keyframes spincbue {
+    from,
+    to {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    26% {
+        transform: rotateY(-90deg) ;
+    }
+    33% {
+        transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50% {
+        transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66% {
+        transform: rotateY(-270deg) rotateZ(90deg);
+    }
+    73% {
+        transform: rotateX(90deg);
+    }
+}
