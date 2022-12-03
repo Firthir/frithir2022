@@ -67,29 +67,43 @@
         width: 100%; 
         height: 100%;
         position: relative;
-        img {
-            width: 100%;
-            height: auto;
-            top: 5px;
-            position: relative;
-        }
-        h3 {
-            margin: 10px 0;
-            padding: 0;
-            font-size: 2.5rem;
-            font-weight: 400;
-            font-family: 'La Belle Aurore', cursive;
-            color: #fff;
-            text-align: center;
-        }
+        
     }
 }
 
 .leaflet-popup-content-wrapper {
     background-color: #585C72;
-    padding: 10px;
+    text-align: center;
+    width: 220px;
+    height: 320px;
+    img {
+        width: 80%;
+        height: auto;
+        margin: 10px auto 0 auto;
+        position: relative;
+        left: -5px;
+    }
+    h3 {
+        margin: 10px 0;
+        padding: 0;
+        font-size: 2.5rem;
+        font-weight: 400;
+        font-family: 'La Belle Aurore', cursive;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        left: -5px;
+    }
 }
-
+.leaflet-popup-tip {
+    background-color: #585C72;
+}
+.leaflet-container a.leaflet-popup-close-button {
+    color: #fff;
+    &:hover {
+        color: #da1710;
+    }
+}
 .leaflet-container {
     width: 100%;
     height: 100%;

@@ -72,7 +72,7 @@ const Contact = () => {
                     <Marker position={position}>
                     <Popup >
                         <img src={TalleyValley} alt='Talley valley' />
-                        <h3>At the end of the road</h3>
+                        <h3>At the end of <br/> the road</h3>
                     </Popup>
                     </Marker>
                 </MapContainer>
