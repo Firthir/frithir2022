@@ -75,11 +75,11 @@
     background-color: #585C72;
     text-align: center;
     width: 220px;
-    height: 320px;
+    height: 350px;
     img {
-        width: 80%;
+        width: 194px;
         height: auto;
-        margin: 10px auto 0 auto;
+        margin: 5px auto 0 auto;
         position: relative;
         left: -5px;
     }
@@ -93,6 +93,7 @@
         text-align: center;
         position: relative;
         left: -5px;
+        line-height: 1;
     }
 }
 .leaflet-popup-tip {
