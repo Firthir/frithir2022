@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faJsSquare, faReact, faApple, faAndroid, faGit, faJira} from '@fortawesome/free-brands-svg-icons'
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 import Profile from '../../assets/images/profile.png'
