@@ -12,6 +12,14 @@
         height: auto;
         bottom: 0;
         transform: rotateZ(55deg) !important;
+        stroke-dasharray: 2066;
+        stroke-dashoffset: 2066;
+        animation: draw 20s linear forwards;
+    }
+    @keyframes draw {
+        to {
+            stroke-dashoffset: 0;
+        }
     }
     .solid-logo {
         position:absolute;

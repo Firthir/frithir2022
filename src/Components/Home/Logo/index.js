@@ -12,10 +12,6 @@ const HomeLogo = () => {
             duration: 1,
             opacity: 1,
         })
-        .from(outlineLogoRef.current, {
-            drawSVG: 1,
-            duration: 360,
-        })
     }, [])
 
     const inAndOut = (e) => {
