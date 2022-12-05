@@ -1,10 +1,8 @@
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faClose } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useState } from 'react'
 import NavBar from './NavBar'
-
-
 
 const Sidebar = () => {
     const [navIsOpen, setNavIsOpen] = useState(false)
