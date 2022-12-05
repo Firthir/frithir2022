@@ -1,46 +1,31 @@
 import './index.scss'
-import { Link, NavLink } from 'react-router-dom'
-import Logo from '../../assets/images/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faBars, faClose } from '@fortawesome/free-solid-svg-icons'
+import { useEffect, useState } from 'react'
+import NavBar from './NavBar'
+
 
 
 const Sidebar = () => {
+    const [navIsOpen, setNavIsOpen] = useState(false)
+    useEffect(() => {
+        const handleClick = (event) => {
+            if (navIsOpen) {
+                setNavIsOpen(false)
+            }
+          };
+        document.addEventListener('click', handleClick, true);
+        return () => {
+          document.removeEventListener('click', handleClick, true);
+        };
+    }, [navIsOpen])
+
     return (
-        <div className='nav-bar'>
-            <Link className='logo' to='/'>
-                <img src={Logo} alt='Logo' />
-            </Link>
-            <nav>
-                <NavLink exact="true" to='/' activeclassname='active'>
-                    <FontAwesomeIcon icon={faHome} color="#4d4d4d" />
-                </NavLink>  
-                <NavLink exact="true" to='/about' className="about-link" activeclassname='active'>
-                    <FontAwesomeIcon icon={faUser} color="#4d4d4d" />
-                </NavLink>  
-                <NavLink exact="true" to='/contact' className="contact-link" activeclassname='active'>
-                    <FontAwesomeIcon icon={faEnvelope} color="#4d4d4d" />
-                </NavLink>  
-            </nav>
-            <ul>
-                <li>
-                    <a 
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://www.linkedin.com/in/alex-frith-50046916/">
-                        <FontAwesomeIcon icon={faLinkedin} color="#4d4d4d" />
-                    </a>
-                </li>
-                <li>
-                    <a 
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://github.com/Firthir">
-                        <FontAwesomeIcon icon={faGithub} color="#4d4d4d" />
-                    </a>
-                </li>
-            </ul>
+        <div className='sidebar'>
+            <div onClick={() => {setNavIsOpen(!navIsOpen)}} className={`mobile-menu ${navIsOpen ? 'close' : ''}`}>
+                {navIsOpen ? '' : <FontAwesomeIcon icon={faBars} color="#4d4d4d" />}
+            </div>
+            <NavBar isMobile={navIsOpen}/>
         </div>
     )
 }

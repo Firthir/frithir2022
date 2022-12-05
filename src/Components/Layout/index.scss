@@ -76,3 +76,152 @@ p {
         animation-delay: 1.3s;
     }
 }
+
+
+@media only screen and (max-width: 850px) {
+    body {
+        .container {
+            height: 100%;
+        }
+        .nav-bar {
+            display: none;
+        }
+        .mobile-menu {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            z-index: 4;
+            font-size: 2.8rem;
+            svg {             
+                color: #da1710;
+            }
+        }
+        .mobile.nav-bar {
+            display: block;
+            animation: bounceInLeft 1s forwards;
+        }
+        .home-page,
+        .about-page {
+            .text-zone {
+                position: absolute;
+                top: auto;
+                left: 0;
+                bottom: 50px;
+                transform: translateY(0);
+                width: 100%;
+                vertical-align: middle;
+                text-align: center;
+                margin: 0 auto;
+                h1 {
+                    font-size: 3rem;
+                    img {
+                        width: 35px;
+                    }
+                }
+                
+            }
+            .home-logo {
+                z-index: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 15%;
+                right: 0;
+                margin: auto;
+                opacity: 0;
+            }
+        }
+        
+        .contact-page.flex {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .text-zone {
+                width: 90%;
+                text-align: center;
+                margin: 0 auto;
+                position: relative;
+                top: 40px;
+                left: 0;
+                h1 {
+                    font-size: 3rem;
+                    img {
+                        width: 35px;
+                    }
+                }
+            }
+            .map-zone {
+                position: absolute;
+                top: auto;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 280px
+            }
+            .leaflet-popup-content-wrapper {
+                background-color: #585C72;
+                text-align: center;
+                width: 110px;
+                height: 170px;
+                img {
+                    width: 80px;
+                }
+                h3 {
+                    font-size: 1rem;
+                }
+            }
+        }
+        .about-page {
+            .text-zone {
+                z-index: 40;
+                width: 90%;
+                margin-left: 5%;
+            }
+        }
+        .cube-container {
+            width: 90%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 5%;
+            z-index: 0;
+            .cube {
+                width: 80%;
+                height: 80%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform-style: preserve-3d;
+                animation: rotate 20s linear infinite;
+            }
+                .cube-spinner {
+                    transform-origin: 150px 150px 0;
+                    margin-left: 0;
+                    div {
+                        width: 300px;
+                        height: 300px;
+                        font-size: 35px;
+                    }
+                    .cube-face-1 {
+                        transform: translateZ(150px); 
+                    }
+                    .cube-face-2 {
+                        transform: rotateY(90deg) translateZ(150px); 
+                    }
+                    .cube-face-3 {
+                        transform: rotateY(90deg) rotateX(90deg) translateZ(150px);
+                    }
+                    .cube-face-4 { 
+                        transform:  rotateY(180deg) rotateZ(90deg) translateZ(150px);
+                    }
+                    .cube-face-5 {
+                        transform: rotateY(-90deg) rotateZ(90deg) translateZ(150px);
+                    }
+                    .cube-face-6 {
+                        transform: rotateX(-90deg) translateZ(150px);
+                    }
+                }
+
+        }
+    }
+  }
