@@ -38,7 +38,7 @@ const Contact = () => {
                 {!status && (
                     <>
                     <p>Lets make something awesome together.</p>
-                    <p>To get the conversation started, tell me a bit about yourself and what project your are working on?</p>
+                    <p>To get the conversation started, tell me a bit about yourself and what projects or idea you have in mind?</p>
                     <div className='contact-form'>
                         <form ref={form} onSubmit={sendEmail}>
                             <ul>
