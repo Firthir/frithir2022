@@ -1,12 +1,12 @@
+.about-page {
+    .text-zone {
+        z-index: 40;
+    }
+}
 .cube-container {
-    width: 50%;
-    height: 80%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding-top: 0;
-    margin-left: 0;
-    overflow: hidden;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
 }
 .cube-spinner {
     animation-name: spincbue;
@@ -30,7 +30,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px 40px;
+        padding: 2px;
         font-family: 'Coolvetica', sans-serif;
         font-weight: 400;
         letter-spacing: 2px;
