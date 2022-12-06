@@ -34,7 +34,7 @@ const NavBar = ({isMobile}) => {
                     <a 
                     target="_blank"
                     rel="noreferrer"
-                    href="https://github.com/Firthir">
+                    href="https://github.com/Frithir">
                         <FontAwesomeIcon icon={faGithub} color="#4d4d4d" />
                     </a>
                 </li>
